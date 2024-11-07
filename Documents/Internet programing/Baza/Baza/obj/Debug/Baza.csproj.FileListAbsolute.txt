@@ -1,0 +1,2 @@
+C:\Users\User\Documents\Internet programing\Baza\Baza\obj\Debug\Baza.csproj.AssemblyReference.cache
+C:\Users\User\Documents\Internet programing\Baza\Baza\obj\Debug\Baza.csproj.CoreCompileInputs.cache
