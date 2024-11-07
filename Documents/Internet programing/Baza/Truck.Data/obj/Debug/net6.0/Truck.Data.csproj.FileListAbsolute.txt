@@ -1,0 +1,14 @@
+C:\Users\User\Documents\Internet programing\Baza\Truck.Data\bin\Debug\net6.0\Truck.Data.deps.json
+C:\Users\User\Documents\Internet programing\Baza\Truck.Data\bin\Debug\net6.0\Truck.Data.runtimeconfig.json
+C:\Users\User\Documents\Internet programing\Baza\Truck.Data\bin\Debug\net6.0\Truck.Data.dll
+C:\Users\User\Documents\Internet programing\Baza\Truck.Data\bin\Debug\net6.0\Truck.Data.pdb
+C:\Users\User\Documents\Internet programing\Baza\Truck.Data\obj\Debug\net6.0\Truck.Data.csproj.AssemblyReference.cache
+C:\Users\User\Documents\Internet programing\Baza\Truck.Data\obj\Debug\net6.0\Truck.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\Internet programing\Baza\Truck.Data\obj\Debug\net6.0\Truck.Data.AssemblyInfoInputs.cache
+C:\Users\User\Documents\Internet programing\Baza\Truck.Data\obj\Debug\net6.0\Truck.Data.AssemblyInfo.cs
+C:\Users\User\Documents\Internet programing\Baza\Truck.Data\obj\Debug\net6.0\Truck.Data.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Internet programing\Baza\Truck.Data\obj\Debug\net6.0\Truck.Data.dll
+C:\Users\User\Documents\Internet programing\Baza\Truck.Data\obj\Debug\net6.0\refint\Truck.Data.dll
+C:\Users\User\Documents\Internet programing\Baza\Truck.Data\obj\Debug\net6.0\Truck.Data.pdb
+C:\Users\User\Documents\Internet programing\Baza\Truck.Data\obj\Debug\net6.0\Truck.Data.genruntimeconfig.cache
+C:\Users\User\Documents\Internet programing\Baza\Truck.Data\obj\Debug\net6.0\ref\Truck.Data.dll
