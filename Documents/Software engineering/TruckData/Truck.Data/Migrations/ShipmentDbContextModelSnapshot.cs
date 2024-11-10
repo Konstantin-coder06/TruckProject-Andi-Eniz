@@ -100,7 +100,12 @@ namespace Truck.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("TruckCompanyId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("TruckCompanyId");
 
                     b.ToTable("Drivers");
                 });
@@ -178,21 +183,6 @@ namespace Truck.Data.Migrations
                     b.ToTable("TrucksCompanies");
                 });
 
-            modelBuilder.Entity("TruckData.Data.Entities.TruckCompany_Driver", b =>
-                {
-                    b.Property<int>("Driver_Id")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TruckCompany_Id")
-                        .HasColumnType("int");
-
-                    b.HasKey("Driver_Id", "TruckCompany_Id");
-
-                    b.HasIndex("TruckCompany_Id");
-
-                    b.ToTable("TruckCompanies_Drivers");
-                });
-
             modelBuilder.Entity("TruckData.Data.Entities.TruckCompany_Shipment", b =>
                 {
                     b.Property<int>("Shipment_Id")
@@ -206,21 +196,6 @@ namespace Truck.Data.Migrations
                     b.HasIndex("TruckCompany_Id");
 
                     b.ToTable("TruckCompanies_Shipments");
-                });
-
-            modelBuilder.Entity("TruckData.Data.Entities.TruckCompany_Vehicle", b =>
-                {
-                    b.Property<int>("Vehicle_Id")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TruckCompany_Id")
-                        .HasColumnType("int");
-
-                    b.HasKey("Vehicle_Id", "TruckCompany_Id");
-
-                    b.HasIndex("TruckCompany_Id");
-
-                    b.ToTable("TruckCompanies_Vehicles");
                 });
 
             modelBuilder.Entity("TruckData.Data.Entities.Vehicle", b =>
@@ -243,10 +218,15 @@ namespace Truck.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("TruckCompanyId")
+                        .HasColumnType("int");
+
                     b.Property<int>("Year")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("TruckCompanyId");
 
                     b.ToTable("Vehicles");
                 });
@@ -270,21 +250,13 @@ namespace Truck.Data.Migrations
                     b.Navigation("Shipment");
                 });
 
-            modelBuilder.Entity("TruckData.Data.Entities.TruckCompany_Driver", b =>
+            modelBuilder.Entity("TruckData.Data.Entities.Driver", b =>
                 {
-                    b.HasOne("TruckData.Data.Entities.Driver", "Driver")
-                        .WithMany()
-                        .HasForeignKey("Driver_Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("TruckData.Data.Entities.TruckCompany", "TruckCompany")
-                        .WithMany()
-                        .HasForeignKey("TruckCompany_Id")
+                        .WithMany("Drivers")
+                        .HasForeignKey("TruckCompanyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Driver");
 
                     b.Navigation("TruckCompany");
                 });
@@ -308,23 +280,22 @@ namespace Truck.Data.Migrations
                     b.Navigation("TruckCompany");
                 });
 
-            modelBuilder.Entity("TruckData.Data.Entities.TruckCompany_Vehicle", b =>
+            modelBuilder.Entity("TruckData.Data.Entities.Vehicle", b =>
                 {
                     b.HasOne("TruckData.Data.Entities.TruckCompany", "TruckCompany")
-                        .WithMany()
-                        .HasForeignKey("TruckCompany_Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TruckData.Data.Entities.Vehicle", "Vehicle")
-                        .WithMany()
-                        .HasForeignKey("Vehicle_Id")
+                        .WithMany("Vehicles")
+                        .HasForeignKey("TruckCompanyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("TruckCompany");
+                });
 
-                    b.Navigation("Vehicle");
+            modelBuilder.Entity("TruckData.Data.Entities.TruckCompany", b =>
+                {
+                    b.Navigation("Drivers");
+
+                    b.Navigation("Vehicles");
                 });
 #pragma warning restore 612, 618
         }

@@ -4,7 +4,7 @@
 
 namespace Truck.Data.Migrations
 {
-    public partial class LastMg : Migration
+    public partial class Truck : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -23,24 +23,6 @@ namespace Truck.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_CompaniesStocks", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Drivers",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DriverPassword = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Experience = table.Column<int>(type: "int", nullable: false),
-                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Drivers", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -80,22 +62,6 @@ namespace Truck.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Vehicles",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Brand = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Model = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Year = table.Column<int>(type: "int", nullable: false),
-                    LiscenceNumber = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Vehicles", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "CompaniesStocks_Shipments",
                 columns: table => new
                 {
@@ -120,24 +86,25 @@ namespace Truck.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "TruckCompanies_Drivers",
+                name: "Drivers",
                 columns: table => new
                 {
-                    TruckCompany_Id = table.Column<int>(type: "int", nullable: false),
-                    Driver_Id = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DriverPassword = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Experience = table.Column<int>(type: "int", nullable: false),
+                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TruckCompanyId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TruckCompanies_Drivers", x => new { x.Driver_Id, x.TruckCompany_Id });
+                    table.PrimaryKey("PK_Drivers", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_TruckCompanies_Drivers_Drivers_Driver_Id",
-                        column: x => x.Driver_Id,
-                        principalTable: "Drivers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_TruckCompanies_Drivers_TrucksCompanies_TruckCompany_Id",
-                        column: x => x.TruckCompany_Id,
+                        name: "FK_Drivers_TrucksCompanies_TruckCompanyId",
+                        column: x => x.TruckCompanyId,
                         principalTable: "TrucksCompanies",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -168,25 +135,24 @@ namespace Truck.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "TruckCompanies_Vehicles",
+                name: "Vehicles",
                 columns: table => new
                 {
-                    TruckCompany_Id = table.Column<int>(type: "int", nullable: false),
-                    Vehicle_Id = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Brand = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Model = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Year = table.Column<int>(type: "int", nullable: false),
+                    LiscenceNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TruckCompanyId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TruckCompanies_Vehicles", x => new { x.Vehicle_Id, x.TruckCompany_Id });
+                    table.PrimaryKey("PK_Vehicles", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_TruckCompanies_Vehicles_TrucksCompanies_TruckCompany_Id",
-                        column: x => x.TruckCompany_Id,
+                        name: "FK_Vehicles_TrucksCompanies_TruckCompanyId",
+                        column: x => x.TruckCompanyId,
                         principalTable: "TrucksCompanies",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_TruckCompanies_Vehicles_Vehicles_Vehicle_Id",
-                        column: x => x.Vehicle_Id,
-                        principalTable: "Vehicles",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -197,9 +163,9 @@ namespace Truck.Data.Migrations
                 column: "CompanyStock_Id");
 
             migrationBuilder.CreateIndex(
-                name: "IX_TruckCompanies_Drivers_TruckCompany_Id",
-                table: "TruckCompanies_Drivers",
-                column: "TruckCompany_Id");
+                name: "IX_Drivers_TruckCompanyId",
+                table: "Drivers",
+                column: "TruckCompanyId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_TruckCompanies_Shipments_TruckCompany_Id",
@@ -207,9 +173,9 @@ namespace Truck.Data.Migrations
                 column: "TruckCompany_Id");
 
             migrationBuilder.CreateIndex(
-                name: "IX_TruckCompanies_Vehicles_TruckCompany_Id",
-                table: "TruckCompanies_Vehicles",
-                column: "TruckCompany_Id");
+                name: "IX_Vehicles_TruckCompanyId",
+                table: "Vehicles",
+                column: "TruckCompanyId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -218,28 +184,22 @@ namespace Truck.Data.Migrations
                 name: "CompaniesStocks_Shipments");
 
             migrationBuilder.DropTable(
-                name: "TruckCompanies_Drivers");
+                name: "Drivers");
 
             migrationBuilder.DropTable(
                 name: "TruckCompanies_Shipments");
 
             migrationBuilder.DropTable(
-                name: "TruckCompanies_Vehicles");
+                name: "Vehicles");
 
             migrationBuilder.DropTable(
                 name: "CompaniesStocks");
-
-            migrationBuilder.DropTable(
-                name: "Drivers");
 
             migrationBuilder.DropTable(
                 name: "Shipments");
 
             migrationBuilder.DropTable(
                 name: "TrucksCompanies");
-
-            migrationBuilder.DropTable(
-                name: "Vehicles");
         }
     }
 }

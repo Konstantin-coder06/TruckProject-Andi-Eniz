@@ -21,6 +21,8 @@ namespace TruckData.Data.Entities
         public string MainTruckAdress { get; set; }
         [Required]
         public string TruckCompanyNumber { get; set; }
+        public ICollection<Vehicle> Vehicles { get; set; }
+        public ICollection<Driver> Drivers { get; set; }
 
     }
 }

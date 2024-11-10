@@ -23,5 +23,8 @@ namespace TruckData.Data.Entities
         public int Experience { get; set; }
         [Required]
         public string Phone { get; set; }
+        [Required]
+        public int TruckCompanyId {  get; set; }
+        public TruckCompany TruckCompany { get; set; }
     }
 }

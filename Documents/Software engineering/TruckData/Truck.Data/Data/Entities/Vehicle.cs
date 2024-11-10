@@ -19,6 +19,8 @@ namespace TruckData.Data.Entities
         public int Year { get; set; }
         [Required]
         public string LiscenceNumber { get; set; }
-
+        [Required]
+        public int TruckCompanyId {  get; set; }
+        public TruckCompany TruckCompany { get; set; }
     }
 }
