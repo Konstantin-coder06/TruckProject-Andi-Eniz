@@ -15,9 +15,20 @@ namespace Truck.WinFormsApp1
         public Admin()
         {
             InitializeComponent();
+            richTextBox1.ReadOnly = true;
         }
 
         private void Admin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

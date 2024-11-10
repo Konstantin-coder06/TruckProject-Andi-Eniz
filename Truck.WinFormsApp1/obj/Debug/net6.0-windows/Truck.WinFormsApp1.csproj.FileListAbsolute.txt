@@ -18,3 +18,7 @@ C:\Users\User\Documents\Software engineering\TruckProject\Truck.WinFormsApp1\obj
 C:\Users\User\Documents\Software engineering\TruckProject\Truck.WinFormsApp1\obj\Debug\net6.0-windows\Truck.WinFormsApp1.Driver.resources
 C:\Users\User\Documents\Software engineering\TruckProject\Truck.WinFormsApp1\obj\Debug\net6.0-windows\Truck.WinFormsApp1.SignIn.resources
 C:\Users\User\Documents\Software engineering\TruckProject\Truck.WinFormsApp1\obj\Debug\net6.0-windows\Truck.WinFormsApp1.SignUp.resources
+C:\Users\User\Documents\Software engineering\TruckProject\Truck.WinFormsApp1\obj\Debug\net6.0-windows\Truck.WinFormsApp1.CompanyGets.resources
+C:\Users\User\Documents\Software engineering\TruckProject\Truck.WinFormsApp1\obj\Debug\net6.0-windows\Truck.WinFormsApp1.CompanyDeliver.resources
+C:\Users\User\Documents\Software engineering\TruckProject\Truck.WinFormsApp1\obj\Debug\net6.0-windows\Truck.WinFormsApp1.Properties.Resources.resources
+C:\Users\User\Documents\Software engineering\TruckProject\Truck.WinFormsApp1\obj\Debug\net6.0-windows\Truck.WinFormsApp1.UpdateDriverCompany.resources

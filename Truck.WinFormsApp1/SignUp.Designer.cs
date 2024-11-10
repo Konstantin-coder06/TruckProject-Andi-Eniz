@@ -45,6 +45,8 @@
             textBox3 = new TextBox();
             label3 = new Label();
             pictureBox1 = new PictureBox();
+            label4 = new Label();
+            textBox6 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -81,7 +83,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Black", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.ControlDark;
-            label2.Location = new Point(963, 323);
+            label2.Location = new Point(984, 161);
             label2.Name = "label2";
             label2.Size = new Size(219, 23);
             label2.TabIndex = 44;
@@ -90,7 +92,7 @@
             // textBox2
             // 
             textBox2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox2.Location = new Point(963, 362);
+            textBox2.Location = new Point(984, 205);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(290, 31);
             textBox2.TabIndex = 43;
@@ -100,7 +102,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Black", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ControlDark;
-            label1.Location = new Point(666, 323);
+            label1.Location = new Point(984, 79);
             label1.Name = "label1";
             label1.Size = new Size(82, 23);
             label1.TabIndex = 42;
@@ -109,7 +111,7 @@
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            textBox1.Location = new Point(666, 362);
+            textBox1.Location = new Point(984, 114);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(290, 31);
             textBox1.TabIndex = 41;
@@ -218,12 +220,34 @@
             pictureBox1.TabIndex = 47;
             pictureBox1.TabStop = false;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Black", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.ControlDark;
+            label4.Location = new Point(666, 323);
+            label4.Name = "label4";
+            label4.Size = new Size(132, 23);
+            label4.TabIndex = 49;
+            label4.Text = "Phone number";
+            label4.Click += label4_Click;
+            // 
+            // textBox6
+            // 
+            textBox6.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            textBox6.Location = new Point(666, 362);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(290, 31);
+            textBox6.TabIndex = 48;
+            // 
             // SignUp
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(1260, 463);
+            Controls.Add(label4);
+            Controls.Add(textBox6);
             Controls.Add(pictureBox1);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -266,5 +290,7 @@
         public TextBox textBox3;
         private Label label3;
         private PictureBox pictureBox1;
+        public Label label4;
+        public TextBox textBox6;
     }
 }

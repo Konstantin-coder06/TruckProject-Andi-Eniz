@@ -38,8 +38,11 @@
             radioButton2 = new RadioButton();
             radioButton1 = new RadioButton();
             label1 = new Label();
+            pictureBox2 = new PictureBox();
+            button1 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // label3
@@ -72,10 +75,12 @@
             richTextBox1.Size = new Size(692, 630);
             richTextBox1.TabIndex = 5;
             richTextBox1.Text = "";
+            richTextBox1.TextChanged += richTextBox1_TextChanged;
             // 
             // panel1
             // 
             panel1.BackColor = Color.DarkCyan;
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(radioButton3);
             panel1.Controls.Add(radioButton2);
@@ -85,6 +90,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(339, 1152);
             panel1.TabIndex = 4;
+            panel1.Paint += panel1_Paint;
             // 
             // pictureBox1
             // 
@@ -101,7 +107,7 @@
             radioButton3.AutoSize = true;
             radioButton3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             radioButton3.ForeColor = SystemColors.ButtonFace;
-            radioButton3.Location = new Point(74, 544);
+            radioButton3.Location = new Point(92, 527);
             radioButton3.Name = "radioButton3";
             radioButton3.Size = new Size(244, 35);
             radioButton3.TabIndex = 3;
@@ -114,7 +120,7 @@
             radioButton2.AutoSize = true;
             radioButton2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             radioButton2.ForeColor = SystemColors.ButtonFace;
-            radioButton2.Location = new Point(74, 447);
+            radioButton2.Location = new Point(92, 468);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(213, 35);
             radioButton2.TabIndex = 2;
@@ -127,7 +133,7 @@
             radioButton1.AutoSize = true;
             radioButton1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             radioButton1.ForeColor = SystemColors.ButtonFace;
-            radioButton1.Location = new Point(74, 358);
+            radioButton1.Location = new Point(92, 417);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(111, 35);
             radioButton1.TabIndex = 1;
@@ -146,11 +152,34 @@
             label1.TabIndex = 0;
             label1.Text = "Categories";
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(1278, 331);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(612, 408);
+            pictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox2.TabIndex = 8;
+            pictureBox2.TabStop = false;
+            // 
+            // button1
+            // 
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            button1.Location = new Point(56, 354);
+            button1.Name = "button1";
+            button1.Size = new Size(120, 42);
+            button1.TabIndex = 5;
+            button1.Text = "Delete";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // Admin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1902, 1153);
+            Controls.Add(pictureBox2);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(richTextBox1);
@@ -161,6 +190,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -176,5 +206,7 @@
         private RadioButton radioButton2;
         private RadioButton radioButton1;
         private Label label1;
+        private PictureBox pictureBox2;
+        private Button button1;
     }
 }

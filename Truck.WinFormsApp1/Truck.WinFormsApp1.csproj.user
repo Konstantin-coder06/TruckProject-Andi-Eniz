@@ -4,6 +4,12 @@
     <Compile Update="Admin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="CompanyDeliver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CompanyGets.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Driver.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -14,6 +20,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UpdateDriverCompany.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
