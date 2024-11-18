@@ -1,0 +1,15 @@
+C:\Users\User\Documents\Software engineering\TruckControllers\TruckControllers\bin\Debug\net6.0\TruckControllers.deps.json
+C:\Users\User\Documents\Software engineering\TruckControllers\TruckControllers\bin\Debug\net6.0\TruckControllers.dll
+C:\Users\User\Documents\Software engineering\TruckControllers\TruckControllers\bin\Debug\net6.0\TruckControllers.pdb
+C:\Users\User\Documents\Software engineering\TruckControllers\TruckControllers\bin\Debug\net6.0\Truck.Data.dll
+C:\Users\User\Documents\Software engineering\TruckControllers\TruckControllers\bin\Debug\net6.0\Truck.Data.pdb
+C:\Users\User\Documents\Software engineering\TruckControllers\TruckControllers\obj\Debug\net6.0\TruckControllers.csproj.AssemblyReference.cache
+C:\Users\User\Documents\Software engineering\TruckControllers\TruckControllers\obj\Debug\net6.0\TruckControllers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\Software engineering\TruckControllers\TruckControllers\obj\Debug\net6.0\TruckControllers.AssemblyInfoInputs.cache
+C:\Users\User\Documents\Software engineering\TruckControllers\TruckControllers\obj\Debug\net6.0\TruckControllers.AssemblyInfo.cs
+C:\Users\User\Documents\Software engineering\TruckControllers\TruckControllers\obj\Debug\net6.0\TruckControllers.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Software engineering\TruckControllers\TruckControllers\obj\Debug\net6.0\TruckControllers.csproj.CopyComplete
+C:\Users\User\Documents\Software engineering\TruckControllers\TruckControllers\obj\Debug\net6.0\TruckControllers.dll
+C:\Users\User\Documents\Software engineering\TruckControllers\TruckControllers\obj\Debug\net6.0\refint\TruckControllers.dll
+C:\Users\User\Documents\Software engineering\TruckControllers\TruckControllers\obj\Debug\net6.0\TruckControllers.pdb
+C:\Users\User\Documents\Software engineering\TruckControllers\TruckControllers\obj\Debug\net6.0\ref\TruckControllers.dll
